@@ -59,29 +59,23 @@ let sangerCampaign = {
 
 ;
 
-// add 1 more key value to the main object
 
-    // sangerCampaign.officePhone = "502-338-1006";
+// add another property to the sangerCampaign object
 
-// make it a function
+  // the function
+    let addNewProperty = function (newProperty, value) {
+    sangerCampaign[newProperty] = value; 
+    }
 
-// let addNewProperty = function (newProperty, value) {
-//   sangerCampaign[newProperty] = value; 
-  // note: must use bracket notation here
-// }
-
-// addNewProperty("officePhone", "502-338-1006");
-
-// console.log(sangerCampaign.officePhone)
-
-
+  // calling it here
+    addNewProperty("emailSignUp", "elizabethsanger.com/signup");
 
 
 // ###########
 
-// function to add a new object to the sangerCampaign object
+// add a new object as a property of the sangerCampaign object
 
-  // new object to add
+  // new object as a property to add
       let contactInfoObject = {
         phone: "502-338-1006",
         email: "elizabeth.sanger@gmail.com",
@@ -99,37 +93,34 @@ let sangerCampaign = {
 
 // ##########
 
-// add another volunteer object to the volunteer array
-
-
-// make it a function
-let newVolunteer;
-let addVolunteerInfo = function (volName, volAddress, volEmail, volPhoneNumber, volAvailability, volWillCanvas, volWillPhoneBank, volWillPole) {
-    newVolunteer = {
-      name: volName,
-      address: volAddress,
-      email: volEmail,
-      phoneNumber: volPhoneNumber,
-      availability: volAvailability,
-      volActivities: {
-        willCanvas: volWillCanvas,
-        willPhoneBank: volWillPhoneBank,
-        willPoll: volWillPole
+// function to add another volunteer object to the volunteer array
+    //  first create a new volunteer with this function, passing in their info as arguments
+      let newVolunteer;
+      let addVolunteerInfo = function (volName, volAddress, volEmail, volPhoneNumber, volAvailability, volWillCanvas, volWillPhoneBank, volWillPole) {
+          newVolunteer = {
+            name: volName,
+            address: volAddress,
+            email: volEmail,
+            phoneNumber: volPhoneNumber,
+            availability: volAvailability,
+            volActivities: {
+              willCanvas: volWillCanvas,
+              willPhoneBank: volWillPhoneBank,
+              willPoll: volWillPole
+            }
+        }
       }
-  }
-}
 
-addVolunteerInfo("Stephanie Yates", "333 S 2nd St", "stephanie@gmail.com", "502-338-1126", "weekdays", true, true, true);
+    // calling it here with the new volunteer's info
+      addVolunteerInfo("Stephanie Yates", "333 S 2nd St", "stephanie@gmail.com", "502-338-1126", "weekdays", true, true, true);
 
+    // here is the function to add the new volunteer to the volunteer object
+      let addVolunteer = function (volunteer) {
+        sangerCampaign.volunteers.push(volunteer);
+      }
 
-
-let addVolunteer = function (volunteer) {
-  sangerCampaign.volunteers.push(volunteer);
-}
-
-addVolunteer(newVolunteer)
-
-console.log(sangerCampaign.volunteers)
+    // calling it here
+      addVolunteer(newVolunteer)
 
 
 // ######
