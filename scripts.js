@@ -58,7 +58,3 @@ let sangerCampaign = {
 }
 
 ;
-
-console.log("high taxes? " + sangerCampaign.platforms.taxes)
-console.log("Jonathan Beam?" + sangerCampaign["volunteers"][0]["Name"])
-console.log("false?" + sangerCampaign["volunteers"][0].activities.willPoll)
