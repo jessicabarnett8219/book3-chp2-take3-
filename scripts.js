@@ -57,10 +57,9 @@ let sangerCampaign = {
   registerToVote: "votetn.org"
 }
 
-;
 
 
-// add another property to the sangerCampaign object
+// // add another property to the sangerCampaign object
 
   // the function
     let addNewProperty = function (newProperty, value) {
@@ -68,33 +67,35 @@ let sangerCampaign = {
     }
 
   // calling it here
-    addNewProperty("emailSignUp", "elizabethsanger.com/signup");
+    // addNewProperty("emailSignUp", "elizabethsanger.com/signup");
 
 
-// ###########
 
-// add a new object as a property of the sangerCampaign object
+// // ###########
 
-  // new object as a property to add
+// // add a new object as a property of the sangerCampaign object
+
+//   // new object as a property to add
       let contactInfoObject = {
         phone: "502-338-1006",
         email: "elizabeth.sanger@gmail.com",
         address: "222 1st St. Nashville, TN"
       }
 
-  // the function
+//   // the function
       let addNewObject = function (newObjectName, newObject){
         sangerCampaign[newObjectName] = newObject;
       }
 
-  // call the function
-      addNewObject("contactInfo", contactInfoObject)
+//   // call the function
+      // addNewObject("contactInfo", contactInfoObject)
 
+      // console.log(sangerCampaign.contactInfo.email)
 
-// ##########
+// // ##########
 
-// function to add another volunteer object to the volunteer array
-    //  first create a new volunteer with this function, passing in their info as arguments
+// // function to add another volunteer object to the volunteer array
+//     //  first create a new volunteer with this function, passing in their info as arguments
       let newVolunteer;
       let addVolunteerInfo = function (volName, volAddress, volEmail, volPhoneNumber, volAvailability, volWillCanvas, volWillPhoneBank, volWillPole) {
           newVolunteer = {
@@ -111,23 +112,31 @@ let sangerCampaign = {
         }
       }
 
-    // calling it here with the new volunteer's info
-      addVolunteerInfo("Stephanie Yates", "333 S 2nd St", "stephanie@gmail.com", "502-338-1126", "weekdays", true, true, true);
+//     // calling it here with the new volunteer's info
+      // addVolunteerInfo("Stephanie Yates", "333 S 2nd St", "stephanie@gmail.com", "502-338-1126", "weekdays", true, true, true);
 
-    // here is the function to add the new volunteer to the volunteer object
+    
+
+//     // here is the function to add the new volunteer to the volunteer object
       let addVolunteer = function (volunteer) {
         sangerCampaign.volunteers.push(volunteer);
       }
 
-    // calling it here
-      addVolunteer(newVolunteer)
+//     // calling it here
+      // addVolunteer(newVolunteer)
+
+// // ######
 
 
-// ######
+// // function to add a new image to the image gallery object
 
+  let addImage = function (imageName, fileName) {
+    sangerCampaign.imageGallery.imageName = fileName;
+  }
 
-// add a new image to the image gallery object
+// // // // call it
 
-    // sangerCampaign.imageGallery.campaignTrail = "campaign.jpg";
+addImage("campaign", "campaign.jpg")
 
-// // make it a function
+console.log(sangerCampaign.imageGallery)
+
