@@ -61,38 +61,82 @@ let sangerCampaign = {
 
 // add 1 more key value to the main object
 
-sangerCampaign.officePhone= "502-338-1006";
+    // sangerCampaign.officePhone = "502-338-1006";
 
-// console.log("502-338-1006?" + sangerCampaign.officePhone)
+// make it a function
 
-// add a new object to the main object
+// let addNewProperty = function (newProperty, value) {
+//   sangerCampaign[newProperty] = value; 
+  // note: must use bracket notation here
+// }
 
-sangerCampaign.contactInfo = {
-  phone: "502-338-1006",
-  email: "elizabeth.sanger@gmail.com",
-  address: "222 1st St. Nashville, TN"
-}
+// addNewProperty("officePhone", "502-338-1006");
 
-// console.log(sangerCampaign.contactInfo.email)
+// console.log(sangerCampaign.officePhone)
+
+
+
+
+// ###########
+
+// function to add a new object to the sangerCampaign object
+
+  // new object to add
+      let contactInfoObject = {
+        phone: "502-338-1006",
+        email: "elizabeth.sanger@gmail.com",
+        address: "222 1st St. Nashville, TN"
+      }
+
+  // the function
+      let addNewObject = function (newObjectName, newObject){
+        sangerCampaign[newObjectName] = newObject;
+      }
+
+  // call the function
+      addNewObject("contactInfo", contactInfoObject)
+
+
+// ##########
 
 // add another volunteer object to the volunteer array
 
-sangerCampaign.volunteers.push({
-  name: "Stephanie Yates",
-  address: "333 S 2nd St. Nashville",
-  email: "stephanie.yates@gmail.com",
-  phoneNumber: "502-338-01126",
-  availability: "Days",
-  activities: {
-    willCanvas: true,
-    willPhoneBank: false,
-    willPoll: true
-        }
-});
 
-// console.log(sangerCampaign.volunteers[3].name)
+// make it a function
+let newVolunteer;
+let addVolunteerInfo = function (volName, volAddress, volEmail, volPhoneNumber, volAvailability, volWillCanvas, volWillPhoneBank, volWillPole) {
+    newVolunteer = {
+      name: volName,
+      address: volAddress,
+      email: volEmail,
+      phoneNumber: volPhoneNumber,
+      availability: volAvailability,
+      volActivities: {
+        willCanvas: volWillCanvas,
+        willPhoneBank: volWillPhoneBank,
+        willPoll: volWillPole
+      }
+  }
+}
+
+addVolunteerInfo("Stephanie Yates", "333 S 2nd St", "stephanie@gmail.com", "502-338-1126", "weekdays", true, true, true);
+
+
+
+let addVolunteer = function (volunteer) {
+  sangerCampaign.volunteers.push(volunteer);
+}
+
+addVolunteer(newVolunteer)
+
+console.log(sangerCampaign.volunteers)
+
+
+// ######
+
 
 // add a new image to the image gallery object
 
-sangerCampaign.imageGallery.campaignTrail = "campaign.jpg";
-// console.log(sangerCampaign.imageGallery.campaignTrail)
+    // sangerCampaign.imageGallery.campaignTrail = "campaign.jpg";
+
+// // make it a function
