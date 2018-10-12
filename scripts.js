@@ -87,6 +87,7 @@ let sangerCampaign = {
         sangerCampaign[newObjectName] = newObject;
       }
 
+
 //   // call the function
       // addNewObject("contactInfo", contactInfoObject)
 
@@ -94,11 +95,12 @@ let sangerCampaign = {
 
 // // ##########
 
-// // function to add another volunteer object to the volunteer array
-//     //  first create a new volunteer with this function, passing in their info as arguments
-      let newVolunteer;
-      let addVolunteerInfo = function (volName, volAddress, volEmail, volPhoneNumber, volAvailability, volWillCanvas, volWillPhoneBank, volWillPole) {
-          newVolunteer = {
+    // here is the function to add the new volunteer to the volunteer object array
+  
+
+      let addVolunteer = function (
+        volName, volAddress, volEmail, volPhoneNumber, volAvailability, volWillCanvas, volWillPhoneBank, volWillPole) { 
+          sangerCampaign.volunteers.push({
             name: volName,
             address: volAddress,
             email: volEmail,
@@ -108,35 +110,34 @@ let sangerCampaign = {
               willCanvas: volWillCanvas,
               willPhoneBank: volWillPhoneBank,
               willPoll: volWillPole
-            }
+              }
+          })
         }
-      }
 
-//     // calling it here with the new volunteer's info
-      // addVolunteerInfo("Stephanie Yates", "333 S 2nd St", "stephanie@gmail.com", "502-338-1126", "weekdays", true, true, true);
+        // calling it here
+        addVolunteer("Stephanie Yates", "222 S St.", "502-123-3567", "weekdays", true, false, true)
 
-    
-
-//     // here is the function to add the new volunteer to the volunteer object
-      let addVolunteer = function (volunteer) {
-        sangerCampaign.volunteers.push(volunteer);
-      }
-
-//     // calling it here
-      // addVolunteer(newVolunteer)
+        console.log(sangerCampaign.volunteers)
+        console.log(sangerCampaign.volunteers[3].name)
 
 // // ######
 
 
 // // function to add a new image to the image gallery object
 
-  let addImage = function (imageName, fileName) {
-    sangerCampaign.imageGallery.imageName = fileName;
-  }
+  // let addImage = function (imageName, fileName) {
+  //   sangerCampaign.imageGallery.imageName = fileName;
+  // }
+
+  // let addImage = function (imageName) {
+  //   sangerCampaign.imageGallery[imageName];
+  // }
+
+  // addImage(campaign)
 
 // // // // call it
 
-addImage("campaign", "campaign.jpg")
+// addImage("campaign", "campaign.jpg")
 
-console.log(sangerCampaign.imageGallery)
+// console.log(sangerCampaign.imageGallery)
 
